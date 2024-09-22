@@ -1,8 +1,12 @@
 <div align="center">
-    <img src="https://yt2tweets.worksmarter.lol/worksmarter-logo.png" width="400" height="400" alt="WorkSmarter Logo" />
-    # `Yt2Tweets`
-    <strong>Turn YouTube Videos into Twitter Threads with AI</strong>
+
+<img src="https://yt2tweets.worksmarter.lol/worksmarter-logo.png" width="150" height="150" alt="WorkSmarter Logo" />
+
+# `Yt2Tweets`
+
+<strong>Turn YouTube Videos into Twitter Threads with AI</strong>
 </div>
+
 <div align="center">
     <br>
     <a href="https://yt2tweets.worksmarter.lol/"><b>yt2tweets.worksmarter.lol</b></a>
