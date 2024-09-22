@@ -4,6 +4,7 @@
   "type": "module",
   "description": "Turn YouTube Videos into Twitter Threads with AI",
   "main": "src/index.js",
+  "repository": "https://github.com/WorkSmarter-lol/yt2tweets-cli",
   "bin": {
     "yt2tweets": "./dist/index.js"
   },
