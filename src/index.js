@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // Import necessary modules
 import fs from 'fs';
 import path from 'path';
