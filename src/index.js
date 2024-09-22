@@ -16,7 +16,7 @@ const spinner = ora('Loading...');
 const program = new Command();
 
 // Define the version of the CLI
-program.version('0.0.1');
+program.version(`v${JSON.parse(fs.readFileSync(path.join(process.cwd(), 'package.json'))).version}`);
 
 // Define the config file path
 const configFilePath = path.join('./api-key.json');
@@ -49,11 +49,21 @@ function authenticate(apiKey) {
   else return false;
 }
 
+// Define the 'set-key' command to handle API key updates
+program
+  .command('set-key <apiKey>')
+  .description('Set your OpenAI API Key')
+  .action(apiKey => {
+    writeApiKey(apiKey);
+    console.log(chalk.green('API Key has been updated successfully.'));
+    process.exit(0);
+  });
+
 // Command to accept a YouTube URL
 program
-  .argument('<url>', 'Turn YouTube Videos into Twitter Threads with AI')
+  .argument('<url>')
+  .description('Turn YouTube Videos into Twitter Threads with AI')
   .action(async url => {
-    console.log('>> url', url);
     const apiKey = readApiKey(); // Read the saved API key
 
     // If no API key is found, prompt for it
@@ -120,18 +130,6 @@ async function convertYt2Tweets(url, apiKey) {
   process.exit(0);
 }
 
-// Command to set the OpenAI API Key using --key or -k
-program.option('-k, --key <apiKey>', 'Set your OpenAI API Key').action(options => {
-  if (options.key) {
-    writeApiKey(options.key);
-    console.log(chalk.green('API Key has been updated successfully.'));
-  }
-
-  // Close readline interface and exit process after printing or error
-  rl.close();
-  process.exit(0);
-});
-
 // Help command enhancement
 program.on('--help', () => {
   console.log('');
@@ -140,8 +138,8 @@ program.on('--help', () => {
   console.log('  $ yt2tweets https://www.youtube.com/watch?v=1-TZqOsVCNM');
   console.log('');
   console.log('To change your OpenAI API Key:');
-  console.log('  $ yt2tweets --key YOUR_NEW_API_KEY');
-  console.log('  $ yt2tweets -k YOUR_NEW_API_KEY');
+  console.log('To set your OpenAI API Key:');
+  console.log('  $ yt2tweets set-key YOUR_NEW_API_KEY');
 });
 
 // Parse the command line arguments

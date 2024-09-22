@@ -20,7 +20,7 @@ var spinner = ora('Loading...');
 var program = new Command();
 
 // Define the version of the CLI
-program.version('0.0.1');
+program.version("v".concat(JSON.parse(fs.readFileSync(path.join(process.cwd(), 'package.json'))).version));
 
 // Define the config file path
 var configFilePath = path.join('./api-key.json');
@@ -54,8 +54,15 @@ function authenticate(apiKey) {
   if (apiKey) return true;else return false;
 }
 
+// Define the 'set-key' command to handle API key updates
+program.command('set-key <apiKey>').description('Set your OpenAI API Key').action(function (apiKey) {
+  writeApiKey(apiKey);
+  console.log(chalk.green('API Key has been updated successfully.'));
+  process.exit(0);
+});
+
 // Command to accept a YouTube URL
-program.command('<url>').description('Print a YouTube URL after authenticating with OpenAI API Key').action(/*#__PURE__*/function () {
+program.argument('<url>').description('Turn YouTube Videos into Twitter Threads with AI').action(/*#__PURE__*/function () {
   var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee2(url) {
     var apiKey;
     return _regeneratorRuntime().wrap(function _callee2$(_context2) {
@@ -121,7 +128,7 @@ program.command('<url>').description('Print a YouTube URL after authenticating w
 // Function to print YouTube URL after authentication
 function convertYt2Tweets(_x3, _x4) {
   return _convertYt2Tweets.apply(this, arguments);
-} // Command to set the OpenAI API Key using --key or -k
+} // Help command enhancement
 function _convertYt2Tweets() {
   _convertYt2Tweets = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee3(url, apiKey) {
     var isValid, youtubeRegex, transcript, _yield$extractTweets, result;
@@ -197,18 +204,6 @@ function _convertYt2Tweets() {
   }));
   return _convertYt2Tweets.apply(this, arguments);
 }
-program.option('-k, --key <apiKey>', 'Set your OpenAI API Key').action(function (options) {
-  if (options.key) {
-    writeApiKey(options.key);
-    console.log(chalk.green('API Key has been updated successfully.'));
-  }
-
-  // Close readline interface and exit process after printing or error
-  rl.close();
-  process.exit(0);
-});
-
-// Help command enhancement
 program.on('--help', function () {
   console.log('');
   console.log('Examples:');
@@ -216,8 +211,8 @@ program.on('--help', function () {
   console.log('  $ yt2tweets https://www.youtube.com/watch?v=1-TZqOsVCNM');
   console.log('');
   console.log('To change your OpenAI API Key:');
-  console.log('  $ yt2tweets --key YOUR_NEW_API_KEY');
-  console.log('  $ yt2tweets -k YOUR_NEW_API_KEY');
+  console.log('To set your OpenAI API Key:');
+  console.log('  $ yt2tweets set-key YOUR_NEW_API_KEY');
 });
 
 // Parse the command line arguments
