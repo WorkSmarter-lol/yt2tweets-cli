@@ -1,6 +1,6 @@
 {
   "name": "yt2tweets",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "type": "module",
   "description": "Turn YouTube Videos into Twitter Threads with AI",
   "main": "./dist/index.js",
