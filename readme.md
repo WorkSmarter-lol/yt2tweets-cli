@@ -51,6 +51,18 @@ Customize how Yt2Tweets converts YouTube videos into Twitter/X threads with our 
 
 Feel free to edit the file at `src/constants/prompts.js`.
 
+1. Identity and purpose
+
+Set the AI’s role and goals with the Identity and Purpose block. Define its function and objectives to ensure it generates content that aligns with your needs and desired outcomes.
+
+2. Steps
+
+Define the step-by-step actions for the AI to follow, ensuring a clear and structured approach for generating your content.
+
+3. Output Formats
+
+Specify the formats in which the AI should deliver content.
+
 Example:
 
 <img src="https://raw.githubusercontent.com/WorkSmarter-lol/yt2tweets-cli/refs/heads/main/public/prompt.png" alt="WorkSmarter Logo" />
