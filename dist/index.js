@@ -20,7 +20,7 @@ var spinner = ora('Loading...');
 var program = new Command();
 
 // Define the version of the CLI
-program.version("v".concat(JSON.parse(fs.readFileSync(path.join(process.cwd(), 'package.json'))).version));
+program.version("v".concat(JSON.parse(fs.readFileSync(path.join('../package.json'))).version));
 
 // Define the config file path
 var configFilePath = path.join('./api-key.json');
