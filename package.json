@@ -14,7 +14,7 @@
     "postinstall": "link-module-alias",
     "dev": "node src/index.js",
     "patch": "npm version patch",
-    "build": "babel src/index.js -o dist/index.js",
+    "build": "babel src/index.js -o dist/index.cjs",
     "publish": "npm publish --access public"
   },
   "_moduleAliases": {
