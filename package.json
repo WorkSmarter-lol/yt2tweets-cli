@@ -1,6 +1,6 @@
 {
   "name": "yt2tweets",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "description": "Turn YouTube Videos into Twitter Threads with AI",
   "main": "src/index.js",
@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts": {
     "postinstall": "link-module-alias",
-    "dev": "node src/index.js"
+    "dev": "node src/index.js",
+    "publish": "npm publish --access public"
   },
   "_moduleAliases": {
     "~services": "src/services",
@@ -20,12 +21,10 @@
     "@langchain/openai": "^0.3.0",
     "chalk": "^5.3.0",
     "commander": "^12.1.0",
+    "link-module-alias": "^1.2.0",
     "ora": "^8.1.0",
     "readline": "^1.3.0",
     "youtube-transcript": "^1.2.1"
-  },
-  "devDependencies": {
-    "link-module-alias": "^1.2.0"
   },
   "resolutions": {
     "@langchain/core": "0.2.31"
