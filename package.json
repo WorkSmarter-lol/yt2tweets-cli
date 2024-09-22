@@ -3,10 +3,10 @@
   "version": "0.0.9",
   "type": "module",
   "description": "Turn YouTube Videos into Twitter Threads with AI",
-  "main": "src/index.js",
+  "main": "./dist/index.js",
   "repository": "https://github.com/WorkSmarter-lol/yt2tweets-cli",
   "bin": {
-    "yt2tweets": "./dist/index.cjs"
+    "yt2tweets": "./dist/index.js"
   },
   "author": "Aaron Kow",
   "license": "MIT",
@@ -14,7 +14,7 @@
     "postinstall": "link-module-alias",
     "dev": "node src/index.js",
     "patch": "npm version patch",
-    "build": "babel src/index.js -o dist/index.cjs",
+    "build": "babel src -d dist",
     "publish": "npm publish --access public"
   },
   "_moduleAliases": {
