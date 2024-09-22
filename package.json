@@ -4,6 +4,9 @@
   "type": "module",
   "description": "Turn YouTube Videos into Twitter Threads with AI",
   "main": "src/index.js",
+  "bin": {
+    "yt2tweets": "src/index.js"
+  },
   "author": "Aaron Kow",
   "license": "MIT",
   "scripts": {
