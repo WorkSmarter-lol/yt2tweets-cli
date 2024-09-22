@@ -27,7 +27,7 @@ $ yarn global add yt2tweets
 Behind the scenes, an OpenAI model is used to convert the YouTube transcript into Tweets.
 
 ```sh
-$ yt2tweets -k "<your-open-ai-key>"
+$ yt2tweets set-key "<your-open-ai-key>"
 ```
 
 ## Usage
