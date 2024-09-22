@@ -1,0 +1,8 @@
+node_modules
+*.log*
+.cache
+.output
+.env
+dist
+.DS_Store
+api-key.json

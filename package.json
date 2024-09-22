@@ -1,0 +1,41 @@
+{
+  "name": "yt2tweets-cli",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Turn YouTube Videos into Twitter Threads with AI",
+  "main": "src/index.js",
+  "author": "Aaron Kow",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "link-module-alias",
+    "dev": "node src/index.js"
+  },
+  "_moduleAliases": {
+    "~services": "src/services",
+    "~constants": "src/constants",
+    "~utils": "src/utils"
+  },
+  "dependencies": {
+    "@langchain/community": "^0.3.1",
+    "@langchain/openai": "^0.3.0",
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "ora": "^8.1.0",
+    "readline": "^1.3.0",
+    "youtube-transcript": "^1.2.1"
+  },
+  "devDependencies": {
+    "link-module-alias": "^1.2.0"
+  },
+  "resolutions": {
+    "@langchain/core": "0.2.31"
+  },
+  "overrides": {
+    "@langchain/core": "0.2.31"
+  },
+  "pnpm": {
+    "overrides": {
+      "@langchain/core": "0.2.31"
+    }
+  }
+}
