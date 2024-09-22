@@ -6,7 +6,7 @@
   "main": "src/index.js",
   "repository": "https://github.com/WorkSmarter-lol/yt2tweets-cli",
   "bin": {
-    "yt2tweets": "./dist/index.js"
+    "yt2tweets": "./dist/index.cjs"
   },
   "author": "Aaron Kow",
   "license": "MIT",
