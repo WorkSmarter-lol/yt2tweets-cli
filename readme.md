@@ -59,7 +59,7 @@ Set the AI’s role and goals with the Identity and Purpose block. Define its fu
 
 Define the step-by-step actions for the AI to follow, ensuring a clear and structured approach for generating your content.
 
-### 3. Output Formats
+### 3. Output formats
 
 Specify the formats in which the AI should deliver content.
 
