@@ -33,7 +33,7 @@ $ yt2tweets set-key "<your-open-ai-key>"
 ## Usage
 
 ```sh
-$ yt2tweets https://youtu.be/1-TZqOsVCNM
+$ yt2tweets "https://youtu.be/1-TZqOsVCNM"
 # Result:
 # 🚀 Want to unlock the secrets of wealth creation and personal empowerment? Let’s dive into timeless principles that can transform your life! 🧵👇
 # 1/13 💡 **Wealth isn't just money; it’s freedom!** True wealth allows you to escape the rat race, giving you the liberty to pursue what you love, not just what pays the bills. It buys you time and options. 🌍✨ #WealthCreation

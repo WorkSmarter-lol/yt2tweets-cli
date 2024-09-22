@@ -17,7 +17,7 @@ const program = new Command();
 
 // Define the version of the CLI
 // program.version(`v${JSON.parse(fs.readFileSync('./package.json')).version}`);
-program.version(`v0.0.20`);
+program.version(`v0.0.21`);
 
 // Define the config file path
 const configFilePath = path.join('./api-key.json');
@@ -135,8 +135,8 @@ async function convertYt2Tweets(url, apiKey) {
 program.on('--help', () => {
   console.log('');
   console.log('Examples:');
-  console.log('  $ yt2tweets https://youtu.be/1-TZqOsVCNM');
-  console.log('  $ yt2tweets https://www.youtube.com/watch?v=1-TZqOsVCNM');
+  console.log('  $ yt2tweets "https://youtu.be/1-TZqOsVCNM"');
+  console.log('  $ yt2tweets "https://www.youtube.com/watch?v=1-TZqOsVCNM"');
   console.log('');
   console.log('To change your OpenAI API Key:');
   console.log('To set your OpenAI API Key:');
