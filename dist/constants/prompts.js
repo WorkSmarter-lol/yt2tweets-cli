@@ -1,10 +1,4 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-var _default = exports["default"] = {
+export default {
   /**
    * 1. Identity and purpose
    * Set the AI’s role and goals with the Identity and Purpose block. Define its function and objectives to ensure it generates content that aligns with your needs and desired outcomes.
