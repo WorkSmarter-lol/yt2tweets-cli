@@ -5,13 +5,14 @@
   "description": "Turn YouTube Videos into Twitter Threads with AI",
   "main": "src/index.js",
   "bin": {
-    "yt2tweets": "src/index.js"
+    "yt2tweets": "./dist/index.js"
   },
   "author": "Aaron Kow",
   "license": "MIT",
   "scripts": {
     "postinstall": "link-module-alias",
     "dev": "node src/index.js",
+    "build": "babel src/index.js -o dist/index.js",
     "publish": "npm publish --access public"
   },
   "_moduleAliases": {
@@ -39,5 +40,10 @@
     "overrides": {
       "@langchain/core": "0.2.31"
     }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.25.6",
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4"
   }
 }
