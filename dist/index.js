@@ -55,7 +55,7 @@ function authenticate(apiKey) {
 }
 
 // Command to accept a YouTube URL
-program.command('yt2tweets <url>').description('Print a YouTube URL after authenticating with OpenAI API Key').action(/*#__PURE__*/function () {
+program.command('<url>').description('Print a YouTube URL after authenticating with OpenAI API Key').action(/*#__PURE__*/function () {
   var _ref = _asyncToGenerator(/*#__PURE__*/_regeneratorRuntime().mark(function _callee2(url) {
     var apiKey;
     return _regeneratorRuntime().wrap(function _callee2$(_context2) {

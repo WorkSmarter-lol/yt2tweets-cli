@@ -4,4 +4,5 @@ node_modules
 .output
 .env
 .DS_Store
+.tmp
 api-key.json

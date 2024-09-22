@@ -51,9 +51,9 @@ function authenticate(apiKey) {
 
 // Command to accept a YouTube URL
 program
-  .command('yt2tweets <url>')
-  .description('Print a YouTube URL after authenticating with OpenAI API Key')
+  .argument('<url>', 'Turn YouTube Videos into Twitter Threads with AI')
   .action(async url => {
+    console.log('>> url', url);
     const apiKey = readApiKey(); // Read the saved API key
 
     // If no API key is found, prompt for it
