@@ -16,7 +16,8 @@ const spinner = ora('Loading...');
 const program = new Command();
 
 // Define the version of the CLI
-program.version(`v${JSON.parse(fs.readFileSync('./package.json')).version}`);
+// program.version(`v${JSON.parse(fs.readFileSync('./package.json')).version}`);
+program.version(`v0.0.19`);
 
 // Define the config file path
 const configFilePath = path.join('./api-key.json');
