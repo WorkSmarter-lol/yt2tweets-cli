@@ -6,7 +6,7 @@
 
 <strong>Turn YouTube Videos into Twitter Threads with AI</strong>
 
-<img src="https://raw.githubusercontent.com/WorkSmarter-lol/yt2tweets-cli/refs/heads/main/public/demo.webp" width="250" height="250" alt="WorkSmarter Logo" />
+<img src="https://raw.githubusercontent.com/WorkSmarter-lol/yt2tweets-cli/refs/heads/main/public/demo.webp" alt="WorkSmarter Logo" />
 
 </div>
 
