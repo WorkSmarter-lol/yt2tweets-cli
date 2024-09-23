@@ -6,6 +6,8 @@
 
 <strong>Turn YouTube Videos into Twitter Threads with AI</strong>
 
+<img src="https://raw.githubusercontent.com/WorkSmarter-lol/yt2tweets-cli/refs/heads/main/public/demo.webp" width="250" height="250" alt="WorkSmarter Logo" />
+
 </div>
 
 <div align="center">
@@ -65,4 +67,4 @@ Specify the formats in which the AI should deliver content.
 
 Example:
 
-<img src="https://raw.githubusercontent.com/WorkSmarter-lol/yt2tweets-cli/refs/heads/main/public/prompt.png" alt="WorkSmarter Logo" />
+<img src="https://raw.githubusercontent.com/WorkSmarter-lol/yt2tweets-cli/refs/heads/main/public/prompt.png" alt="Example prompts for Yt2tweets" />
